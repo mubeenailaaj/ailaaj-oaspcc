@@ -1,15 +1,48 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Divider, List, ListItemButton, ListItemText } from '@mui/material';
+import { AilaajLogo } from '../../resources/images';
+
+const MenuItems = [
+	{
+		title: 'Dashboard',
+		to: '/Dashboard',
+	},
+	{
+		title: 'Accounts',
+		to: '/Accounts',
+	},
+	{
+		title: 'Patients',
+		to: '/Patients',
+	},
+	{
+		title: 'About',
+		to: '/About',
+	},
+];
 
 const LeftNavBar = () => {
+	const location = useLocation();
+	const currentRoute = location?.pathname || null;
+	console.log(location, currentRoute);
+
 	return (
 		<div className='left-nav-bar'>
-			<div>Left Navigation</div>
-			<nav>
+			<div>
+				<AilaajLogo />
+			</div>
+			<Divider />
+			<List>
+				{MenuItems.map((mi) => (
+					<ListItemButton selected={currentRoute === mi.to} key={mi.title}>
+						<ListItemText primary={mi.title} to={mi.title} />
+					</ListItemButton>
+				))}
+			</List>
+			{/* <nav>
 				<ul>
-					<li>
-						<Link to='/'>Home</Link>
-					</li>
+					<li></li>
 					<li>
 						<Link to='/about'>About</Link>
 					</li>
@@ -17,7 +50,7 @@ const LeftNavBar = () => {
 						<Link to='/users'>Users</Link>
 					</li>
 				</ul>
-			</nav>
+			</nav> */}
 		</div>
 	);
 };

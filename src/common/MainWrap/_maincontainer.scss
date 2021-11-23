@@ -5,7 +5,14 @@
 	height: 100vh;
 
 	.container-body {
-		background-color: $platinum;
+		background-color: $flash-white;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+	}
+
+	.main-body {
+		padding: 20px;
 		display: flex;
 		flex: 1;
 		flex-direction: column;

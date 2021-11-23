@@ -1,0 +1,18 @@
+.header {
+	height: 128px;
+	position: sticky;
+	display: flex;
+	align-items: center;
+	background-color: $white-color;
+	.header-div {
+		display: flex;
+		flex: 1;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+	}
+	.welcome-span {
+		display: flex;
+		align-items: center;
+	}
+}

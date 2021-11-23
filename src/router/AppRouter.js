@@ -10,9 +10,9 @@ const AppRouter = () => {
 			<div>
 				<Routes>
 					<Route path='/about' element={<About />} />
-					<Route path='/users' element={<Users />} />
+					<Route path='/Dashboard' element={<Dashboard />} />
 					<Route path='/login' element={<Login />} />
-					<Route path='/' element={<Dashboard />} />
+					<Route path='/' element={<Login />} />
 				</Routes>
 			</div>
 		</BrowserRouter>
@@ -21,10 +21,6 @@ const AppRouter = () => {
 
 function About() {
 	return <h2>About</h2>;
-}
-
-function Users() {
-	return <h2>Users</h2>;
 }
 
 export { AppRouter };

@@ -1,0 +1,13 @@
+.main-container {
+	background-color: $platinum;
+	display: flex;
+	flex: 1 1;
+	height: 100vh;
+
+	.container-body {
+		background-color: $platinum;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+	}
+}

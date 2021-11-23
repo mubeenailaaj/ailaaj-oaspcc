@@ -1,0 +1,21 @@
+.login-container {
+	// background-color: wheat;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+}
+.login {
+	background-color: $white-color;
+	display: flex;
+	flex-direction: column;
+	// flex: 0.5;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	align-self: center;
+	.login-title {
+		font-size: 22px;
+		margin-top: 15px;
+	}
+}

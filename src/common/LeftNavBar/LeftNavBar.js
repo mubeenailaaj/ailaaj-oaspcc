@@ -1,16 +1,12 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Divider, List, ListItemButton, ListItemText } from '@mui/material';
 import { AilaajLogo } from '../../resources/images';
 
 const MenuItems = [
 	{
-		title: 'Dashboard',
+		title: 'Quick View',
 		to: '/Dashboard',
-	},
-	{
-		title: 'Accounts',
-		to: '/Accounts',
 	},
 	{
 		title: 'Patients',
@@ -23,6 +19,7 @@ const MenuItems = [
 ];
 
 const LeftNavBar = () => {
+	const navigate = useNavigate();
 	const location = useLocation();
 	const currentRoute = location?.pathname || null;
 	console.log(location, currentRoute);
@@ -35,7 +32,11 @@ const LeftNavBar = () => {
 			<Divider />
 			<List>
 				{MenuItems.map((mi) => (
-					<ListItemButton selected={currentRoute === mi.to} key={mi.title}>
+					<ListItemButton
+						selected={currentRoute === mi.to}
+						key={mi.title}
+						onClick={() => navigate(mi.to)}
+					>
 						<ListItemText primary={mi.title} to={mi.title} />
 					</ListItemButton>
 				))}

@@ -3,15 +3,16 @@ import { Search } from '@mui/icons-material';
 import { TextField } from '@mui/material';
 import { MainWrap } from '../../common';
 import { useDebounce } from '../../utils/use-debounce';
+import { DataTable } from './DataTable';
 
-const Dashboard = () => {
+const Patients = () => {
 	const [filterByName, setFilterByName] = useState('');
 	const { debouncedValue } = useDebounce(filterByName, 500);
 
 	return (
 		<MainWrap isLeftNav>
 			<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-				<h2>Dashboard</h2>
+				<h2>Patients</h2>
 				<span>
 					<TextField
 						variant='outlined'
@@ -28,9 +29,11 @@ const Dashboard = () => {
 				style={{
 					backgroundColor: 'white',
 				}}
-			></div>
+			>
+				<DataTable />
+			</div>
 		</MainWrap>
 	);
 };
 
-export { Dashboard };
+export { Patients };

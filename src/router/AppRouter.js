@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Dashboard } from '../views/Dashboard';
 import { Login } from '../views/Auth';
+import { Patients, QuickView } from '../views';
 import '../../src/resources/styles/style.css';
 
 const AppRouter = () => {
@@ -10,7 +10,9 @@ const AppRouter = () => {
 			<div>
 				<Routes>
 					<Route path='/about' element={<About />} />
-					<Route path='/Dashboard' element={<Dashboard />} />
+					<Route path='/Patients' element={<Patients />} />
+
+					<Route path='/Dashboard' element={<QuickView />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/' element={<Login />} />
 				</Routes>

@@ -4,14 +4,14 @@ import { TextField } from '@mui/material';
 import { MainWrap } from '../../common';
 import { useDebounce } from '../../utils/use-debounce';
 
-const Dashboard = () => {
+const QuickView = () => {
 	const [filterByName, setFilterByName] = useState('');
 	const { debouncedValue } = useDebounce(filterByName, 500);
 
 	return (
 		<MainWrap isLeftNav>
 			<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-				<h2>Dashboard</h2>
+				<h2>Quick View</h2>
 				<span>
 					<TextField
 						variant='outlined'
@@ -33,4 +33,4 @@ const Dashboard = () => {
 	);
 };
 
-export { Dashboard };
+export { QuickView };

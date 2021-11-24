@@ -11,10 +11,17 @@
 		flex-direction: column;
 	}
 
-	.main-body {
-		padding: 20px;
+	.login-body {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
+	}
+
+	.main-body {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		margin-top: 130px;
+		margin-left: 250px;
 	}
 }

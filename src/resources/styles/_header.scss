@@ -1,9 +1,13 @@
 .header {
 	height: 128px;
-	position: sticky;
+	position: fixed;
+	z-index: 1;
 	display: flex;
 	align-items: center;
+	right: 0px;
+	left: 250px;
 	background-color: $white-color;
+	border-bottom: 2px solid $flash-white;
 	.header-div {
 		display: flex;
 		flex: 1;

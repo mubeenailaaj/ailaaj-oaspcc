@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Grid, TextField } from '@mui/material';
+import { Grid, TextField } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { AilaajLogo } from '../../../resources/images';
 import { emailRegex } from '../../../utils/constants';
+import { OutlinedButton, TextButton } from '../../../common/Buttons';
 
 const LoginForm = ({ onForgotButtonClick }) => {
 	const {
@@ -55,12 +56,11 @@ const LoginForm = ({ onForgotButtonClick }) => {
 					</Grid>
 					<Grid item>
 						<Grid container direction='row' justifyContent='space-between'>
-							<Button variant='text' onClick={onForgotButtonClick}>
-								Forgot Password?
-							</Button>
-							<Button variant='outlined' type='submit'>
-								Login
-							</Button>
+							<TextButton
+								buttonText={'Forgot Password?'}
+								onClick={onForgotButtonClick}
+							/>
+							<OutlinedButton type='submit' buttonText={'Login'} />
 						</Grid>
 					</Grid>
 				</Grid>

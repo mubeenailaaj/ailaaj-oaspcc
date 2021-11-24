@@ -6,15 +6,17 @@ const Login = () => {
 	const [isLoginForm, setIsLoginForm] = useState(true);
 
 	return (
-		<MainWrap isLeftNav={false}>
-			{isLoginForm ? (
-				<LoginForm onForgotButtonClick={() => setIsLoginForm(!isLoginForm)} />
-			) : (
-				<ForgotPasswordForm
-					onLoginButtonClick={() => setIsLoginForm(!isLoginForm)}
-				/>
-			)}
-		</MainWrap>
+		<div className='main-container'>
+			<div className='login-body'>
+				{isLoginForm ? (
+					<LoginForm onForgotButtonClick={() => setIsLoginForm(!isLoginForm)} />
+				) : (
+					<ForgotPasswordForm
+						onLoginButtonClick={() => setIsLoginForm(!isLoginForm)}
+					/>
+				)}
+			</div>
+		</div>
 	);
 };
 

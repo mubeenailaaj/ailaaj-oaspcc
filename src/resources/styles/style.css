@@ -1,14 +1,17 @@
 .header {
   height: 128px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  right: 0px;
+  left: 250px;
   background-color: #ffffff;
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .header .header-div {
@@ -41,12 +44,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
   width: 250px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
+  position: fixed;
   -webkit-box-shadow: 2px 0px 5px 0px #142560;
           box-shadow: 2px 0px 5px 0px #142560;
 }
@@ -116,8 +120,7 @@
           flex-direction: column;
 }
 
-.main-container .main-body {
-  padding: 20px;
+.main-container .login-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,5 +131,80 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.main-container .main-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 130px;
+  margin-left: 250px;
+}
+
+.quick-view .top-search {
+  position: fixed;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 72px;
+  right: 0;
+  left: 260px;
+  background: #f1f1f1;
+  padding: 20px 20px 30px 10px;
+}
+
+.quick-view .top-search .search-field {
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.3);
+}
+
+.quick-view .grid-container {
+  padding: 20px;
+  margin-top: 110px;
+}
+
+.quick-view .patient-detail-card {
+  padding: 20px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #142560;
+}
+
+.quick-view .patient-detail-card .name-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quick-view .patient-detail-card .buttons-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

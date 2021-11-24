@@ -1,9 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { ArrowBack } from '@mui/icons-material';
-import { Button, Grid, TextField } from '@mui/material';
+import { Grid, TextField } from '@mui/material';
 import { AilaajLogo } from '../../../resources/images';
 import { emailRegex } from '../../../utils/constants';
+import { OutlinedButton, TextButton } from '../../../common/Buttons';
 
 const ForgotPasswordForm = ({ onLoginButtonClick }) => {
 	const {
@@ -44,16 +45,12 @@ const ForgotPasswordForm = ({ onLoginButtonClick }) => {
 
 					<Grid item>
 						<Grid container direction='row' justifyContent='space-between'>
-							<Button
-								variant='text'
+							<TextButton
+								buttonText={'Back to Login'}
 								onClick={onLoginButtonClick}
 								startIcon={<ArrowBack />}
-							>
-								Back to Login
-							</Button>
-							<Button variant='outlined' type='submit'>
-								Reset password
-							</Button>
+							/>
+							<OutlinedButton type='submit' buttonText={'Reset password'} />
 						</Grid>
 					</Grid>
 				</Grid>

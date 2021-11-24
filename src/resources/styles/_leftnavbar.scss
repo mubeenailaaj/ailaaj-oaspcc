@@ -1,8 +1,9 @@
 .left-nav-bar {
 	background-color: $white-color;
 	display: flex;
+	height: 100vh;
 	width: 250px;
 	flex-direction: column;
-	position: relative;
+	position: fixed;
 	box-shadow: 2px 0px 5px 0px $primary-color;
 }

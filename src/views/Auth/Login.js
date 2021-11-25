@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { MainWrap } from '../../common';
 import { ForgotPasswordForm, LoginForm } from './forms';
 
 const Login = () => {

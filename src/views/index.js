@@ -1,2 +1,2 @@
 export { Dashboard } from './Dashboard';
-export { Patients, QuickView } from './Patients';
+export { Patients, QuickView, Patient } from './Patients';

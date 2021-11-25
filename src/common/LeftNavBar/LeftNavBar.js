@@ -2,27 +2,31 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Divider, List, ListItemButton, ListItemText } from '@mui/material';
 import { AilaajLogo } from '../../resources/images';
+import { RoutePaths } from '../../router/AppPaths';
 
 const MenuItems = [
 	{
 		title: 'Quick View',
-		to: '/Dashboard',
+		to: RoutePaths.Patients.QuickView,
+		activeRoutes: [RoutePaths.Patients.QuickView, RoutePaths.Patients.Patient],
 	},
 	{
 		title: 'Patients',
-		to: '/Patients',
+		to: RoutePaths.Patients.Patients,
+		activeRoutes: [RoutePaths.Patients.Patients],
 	},
 	{
 		title: 'About',
 		to: '/About',
+		activeRoutes: ['/About'],
 	},
 ];
 
 const LeftNavBar = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
+
 	const currentRoute = location?.pathname || null;
-	console.log(location, currentRoute);
 
 	return (
 		<div className='left-nav-bar'>
@@ -30,10 +34,10 @@ const LeftNavBar = () => {
 				<AilaajLogo />
 			</div>
 			<Divider />
-			<List>
+			<List disablePadding>
 				{MenuItems.map((mi) => (
 					<ListItemButton
-						selected={currentRoute === mi.to}
+						selected={mi.activeRoutes.includes(currentRoute)}
 						key={mi.title}
 						onClick={() => navigate(mi.to)}
 					>
@@ -41,17 +45,6 @@ const LeftNavBar = () => {
 					</ListItemButton>
 				))}
 			</List>
-			{/* <nav>
-				<ul>
-					<li></li>
-					<li>
-						<Link to='/about'>About</Link>
-					</li>
-					<li>
-						<Link to='/users'>Users</Link>
-					</li>
-				</ul>
-			</nav> */}
 		</div>
 	);
 };

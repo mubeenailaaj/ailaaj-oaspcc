@@ -1,5 +1,5 @@
-import React from 'react';
-import { Grid, TextField } from '@mui/material';
+import React, { useState } from 'react';
+import { Checkbox, FormControlLabel, Grid, TextField } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { AilaajLogo } from '../../../resources/images';
 import { emailRegex } from '../../../utils/constants';
@@ -11,6 +11,8 @@ const LoginForm = ({ onForgotButtonClick }) => {
 		formState: { errors },
 		handleSubmit,
 	} = useForm({ mode: 'onSubmit', reValidateMode: 'onChange' | 'onBlur' });
+
+	const [rememberMe, setRememberMe] = useState(false);
 
 	const onSubmit = (data) => console.log({ data, errors });
 
@@ -51,6 +53,17 @@ const LoginForm = ({ onForgotButtonClick }) => {
 							error={errors.password?.type === 'required'}
 							helperText={
 								errors.password?.type === 'required' && 'password is required'
+							}
+						/>
+					</Grid>
+					<Grid item direction='row' display='flex'>
+						<FormControlLabel
+							label='Remember me'
+							control={
+								<Checkbox
+									checked={rememberMe}
+									onChange={() => setRememberMe(!rememberMe)}
+								/>
 							}
 						/>
 					</Grid>

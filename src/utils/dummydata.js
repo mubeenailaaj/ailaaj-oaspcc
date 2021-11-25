@@ -8,6 +8,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 2,
@@ -18,6 +19,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '',
 	},
 	{
 		id: 3,
@@ -28,6 +30,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 4,
@@ -38,6 +41,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 5,
@@ -48,6 +52,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 6,
@@ -58,6 +63,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 7,
@@ -68,6 +74,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-022200x',
 	},
 	{
 		id: 8,
@@ -78,6 +85,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 9,
@@ -88,6 +96,7 @@ const patientsLst = [
 		cnic: '37406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 10,
@@ -98,6 +107,7 @@ const patientsLst = [
 		cnic: '38406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 11,
@@ -108,6 +118,7 @@ const patientsLst = [
 		cnic: '38406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-099200x',
 	},
 	{
 		id: 12,
@@ -118,6 +129,7 @@ const patientsLst = [
 		cnic: '38406-1659921-x',
 		companyName: 'Ailaaj',
 		address: '50N - ailaaj @ colabs, Lahore',
+		contactNo: '03xx-033200x',
 	},
 ];
 

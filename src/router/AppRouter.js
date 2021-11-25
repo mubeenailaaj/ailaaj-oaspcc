@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Login } from '../views/Auth';
-import { Patients, QuickView } from '../views';
+import { Patient, Patients, QuickView } from '../views';
+import { RoutePaths } from './AppPaths';
 import '../../src/resources/styles/style.css';
 
 const AppRouter = () => {
@@ -10,9 +11,10 @@ const AppRouter = () => {
 			<div>
 				<Routes>
 					<Route path='/about' element={<About />} />
-					<Route path='/Patients' element={<Patients />} />
+					<Route path={RoutePaths.Patients.Patients} element={<Patients />} />
 
-					<Route path='/Dashboard' element={<QuickView />} />
+					<Route path={RoutePaths.Patients.Patient} element={<Patient />} />
+					<Route path={RoutePaths.Patients.QuickView} element={<QuickView />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/' element={<Login />} />
 				</Routes>
